@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>hola</title>
-</head>
-<body>
 	<?php
-	toCamelCase("gran_maestro");
 	function toCamelCase($str){
 		$primero = true;
 		$letters = "";
@@ -21,12 +14,12 @@
 			    	if ($primero == true) {
 			    		$output .= strtolower($letters);
 			    		$letters = "";
+			    		$primero = false;
 			    	}else{
-			    		$letters == strtolower($letters);
+			    		$letters = strtolower($letters);
 			    		$output .= ucfirst($letters);
 			    		$letters = "";
 			    	}
-			    		var_dump($output);
 
 			    }else{
 				    $letters .= $str[$i];
@@ -35,24 +28,22 @@
 			 		if ($primero == true) {
 			    		$output .= strtolower($letters);
 			    		$letters = "";
+			    		$primero = false;
 			    	}else{
-			    		$letters == strtolower($letters);
+			    		$letters = strtolower($letters);
 			    		$output .= ucfirst($letters);
 			    		$letters = "";
 			    	}
 			 	}
-			    		var_dump($output);
-			 	
+
 			}
 
 
 		    
 		    
 		}
-		echo $output . "<br>";
-		echo ucfirst("hola");;
+		return($output);
 	}
 	?>
-</body>
-</html>
+
 
